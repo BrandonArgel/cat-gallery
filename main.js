@@ -154,6 +154,12 @@ const getFavoriteCats = async () => {
 	});
 	const data = await res.json();
 
+	if(data.length === 0) {
+		const p = document.createElement("p");
+		p.textContent = "Select some cats to add to favorites.";
+		fragment.append(p);
+	}
+
 	data.forEach((cat) => {
 		const imgContainer = document.createElement("div");
 		const img = document.createElement("img");

@@ -54,6 +54,12 @@ section div {
   position: relative;
 }
 
+section > p {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 section img {
   object-fit: cover;
   width: 100%;
